@@ -1,61 +1,104 @@
-# DKIPPI PII Scanner — Setup Guide
+# Automated PII Detection System
 
-## What This App Does
-A web-based tool for DKIPPI and TYIMS to automatically scan files for Nigerian PII
-(NIN, BVN, Phone Numbers) and generate compliance reports under NDPA 2023.
+## Overview
+The Automated PII Detection System is a machine learning/NLP-based application designed to identify and protect Personally Identifiable Information (PII) from datasets and text-based records. The system helps improve data privacy, security, and compliance by automatically detecting sensitive information such as names, phone numbers, email addresses, and identification numbers.
 
----
+## Features
+- Automatic PII detection
+- Sensitive data identification
+- Data privacy enhancement
+- Machine learning/NLP integration
+- Fast and scalable processing
+- User-friendly workflow
 
-## How to Run Locally (Your Own Computer)
+## Technologies Used
+- Python
+- Pandas
+- Scikit-learn
+- NLP Techniques
+- Jupyter Notebook
+- Regex
 
-### Step 1 — Install Python
-Download Python 3.10 or newer from https://python.org if you don't have it.
+## Project Structure
 
-### Step 2 — Install dependencies
-Open your terminal (Command Prompt on Windows) and run:
+```bash
+Automated-PII/
+│
+├── data/
+├── notebooks/
+├── src/
+├── models/
+├── README.md
+└── requirements.txt
 ```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Stephanie-hezekiah/Automated-PII.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd Automated-PII
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
-### Step 3 — Run the app
+## Usage
+
+Run the application or notebook:
+
+```bash
+python app.py
 ```
-streamlit run dkippi_app.py
+
+OR open the Jupyter Notebook:
+
+```bash
+jupyter notebook
 ```
 
-The app will open automatically in your browser at http://localhost:8501
+## Sample PII Categories Detected
+- Full Names
+- Phone Numbers
+- Email Addresses
+- National Identification Numbers
+- Addresses
+- Financial Information
 
----
+## Screenshots
+Add screenshots of:
+- Input dataset
+- Detection results
+- Dashboard/output
 
-## How to Deploy Online (Free — Streamlit Cloud)
+Example:
 
-1. Create a free account at https://streamlit.io/cloud
-2. Upload both files (`dkippi_app.py` and `requirements.txt`) to a GitHub repository
-3. In Streamlit Cloud, click "New App" → connect your GitHub repo → select `dkippi_app.py`
-4. Click Deploy — your app will be live at a public URL within 2 minutes
+![PII Detection Output](images/output.png)
 
----
+## Future Improvements
+- Real-time PII detection
+- Deep learning integration
+- API deployment
+- Web application interface
+- Multi-language support
 
-## How to Use the App
+## Research Relevance
+This project contributes to data privacy and healthcare/security-related identity protection systems by improving automated detection of sensitive information.
 
-### Single File Mode (Row-by-Row)
-- Upload one CSV or Excel file
-- The app scans every row for NIN, BVN, and phone number patterns
-- View risk levels per row, filter by risk, search by name
-- Download findings as CSV or PDF
+## Author
+### Stephanie Hezekiah / Adeoye Rachael
+Data Analyst | Researcher | Machine Learning Enthusiast
 
-### Multiple Files Mode (Directory)
-- Upload several files at once
-- The app scans each file's full text for labelled PII (e.g. "NIN: 12345678901")
-- See which files contain the most PII and their risk levels
-- Download a summary report
+GitHub: :contentReference[oaicite:0]{index=0}
 
-### Custom Column Names
-If your file uses different column headers (e.g. "Mobile" instead of "PHONE NUMBER"),
-enter your column names in the sidebar before scanning.
-
----
-
-## Files Included
-- `dkippi_app.py`     — The full Streamlit web application
-- `requirements.txt` — Python package dependencies
-- `README.md`        — This setup guide
+## License
+This project is licensed under the MIT License.
